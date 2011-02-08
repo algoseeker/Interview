@@ -1,3 +1,9 @@
+/* Given a preorder traversal of tree as a string 'NNLLNLL'
+Non-leaf nodes are labelled N and Leaf ndoes are labelled L.
+Each node has either 0 or 2 children.
+Construct the tree given the preorder traversal string.
+*/
+
 import java.io.Console;
 
 public class Node{
