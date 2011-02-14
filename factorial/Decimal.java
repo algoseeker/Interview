@@ -7,6 +7,7 @@ protected String number;
 
 public Decimal(String s){
 	int i;
+	// To remove the leading zeroes if entered
 	for(i=0;i<s.length()-1;i++){
 		if(s.charAt(i)!='0')
 		   break;
@@ -17,7 +18,7 @@ public void add(Decimal anum){
 	this.number = Decimal.add(this,anum);
 }
 public void multiply(Decimal anum){
-	number = Decimal.multiply(this, anum).getNum();
+	this.number = Decimal.multiply(this, anum).getNum();
 }
 
 public static Decimal multiply(Decimal num, Decimal num2){
@@ -70,6 +71,8 @@ public static String padZeroes(String s, int nzeroes){
 public static String add(Decimal num, Decimal num2){
 	Decimal greater;
 	Decimal smaller;
+
+	// Finding the smaller or larger just on basis of size, not actual value
 	if(num.size()>=num2.size()){
 		greater = num;
 		smaller = num2;
@@ -77,6 +80,7 @@ public static String add(Decimal num, Decimal num2){
 		greater = num2;
 		smaller = num;
 	}
+
 	int carry = 0;
 	int i= greater.size()-1;
 	String s1 = greater.getNum();

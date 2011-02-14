@@ -1,6 +1,9 @@
 import java.io.*;
 import java.util.*;
 
+/*
+Given a sorted array which has been rotated unknown number of times, find a number k. For example: 23579 after random rotations becomes 57923. Find 3 for example in less than O(n) time.
+*/
 public class SearchRotatedArray{
 	static int position=-1;
 
